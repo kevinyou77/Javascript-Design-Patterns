@@ -1,3 +1,14 @@
+/*
+    Program flow
+
+    We create 3 services to become an observer
+    Initialize it
+    ObserversList are to store observers (in the form of functions)
+    We override the original save function in the task.js
+    Then we call notify and set the context to the Observable task
+    Then the observable task array will be looped and execute the observer functions with 'this' which is the ObservableTask
+*/
+
 let Task = require('./task');
 
 let notificationService = function() {
